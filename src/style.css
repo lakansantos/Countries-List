@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper{
+    display: grid;
+    height: 100vh;
+    grid-template: 
+    "main main main" 60%
+    "countries countries countries" 40%
+    /100%;
+}
+
+.mainContainer{
+    background-color: gray;
+    grid-area: main;
+    background: url(https://images.pexels.com/photos/1098515/pexels-photo-1098515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat rgba(0,0,0, .8);
+    background-size: cover;
+    background-position: center bottom;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.mainContainer > div{
+    margin: 20px;
+}
+
+.mainContainer > h1{
+    font-size: 50px;
+    letter-spacing: 20px;
+}
+.mainContainer > .totalCountries{
+    font-size: 17px;
+    margin: 10px;
+}
+
+.mainContainer > .startWith{
+    font-size: 15px;
+    height: 10px;
+    
+}
+.spanLetters{
+    color: #3498db;
+    font-weight: bold;
+    font-style: italic;
+}
+.countriesContainer{
+    background-color:white;
+    grid-area: countries;
+    height: 1200px;
+
+}
+
+
+button .arrow{
+    width: 10px;
+    height: 12px;
+}
+.searchIcon{
+    width: 20px;
+}
+
+button{
+    background:rgb(41, 128, 185);
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 5px;
+    color: white;
+}
+
+.active, button:hover{
+    background-color: #0c2461;
+    cursor: pointer;
+}
+
+.searchContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar{
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    border-radius: 20px 20px;
+    border: none;
+    text-indent:50px;
+}
+
+.searchBar:focus{
+    outline: solid 2px #3498db;
+}
+
+.countriesContainer{
+    width: 1200px;
+    height: 400px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 25px auto;
+    justify-content: center;
+   
+
+}
+
+.countriesContainer::-webkit-scrollbar{
+    width: 1vh;
+}
+.countriesContainer::-webkit-scrollbar-thumb{
+    background-color: #3498db;
+    height: 100px;
+    border-radius: 5px;
+}
+.countriesContainer::-webkit-scrollbar-track{
+    background-color: white;
+}
+
+
+.countriesLists{
+    display: flex;
+    margin: 20px;
+    width: 150px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    background: url(https://images.pexels.com/photos/269790/pexels-photo-269790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center/cover rgba(0,0,0, .4);
+    background-blend-mode: darken;
+    color: white;
+    border-radius: 5px;
+
+ 
+}
+
+.noDataFound{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color:rgb(41, 128, 185)
+}
